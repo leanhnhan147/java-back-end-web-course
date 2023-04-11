@@ -14,8 +14,8 @@
 
 ## Section 1. SQL OVERVIEW
 - Which is a computer language for:
-+ storing,
-+ manipulating and
-+ retrieving data stored in relational database.
+  - storing,
+  - manipulating and
+  - retrieving data stored in relational database.
 - SQL is the standard language for Relation Database System, like **MySQL, MSAccess, Oracle, Sybase, Informix, Postgres** and **SQL Server** use SQL as standard database language.
 - SQL is an ANSI (American National Standards Institute) standard.
