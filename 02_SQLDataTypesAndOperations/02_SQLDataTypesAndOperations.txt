@@ -1,0 +1,7 @@
+
+char: fix cứng
+varchar: thay đổi được
+
+Timestamp: Lưu thời gian tạo, thời gian cập nhật
+
+
