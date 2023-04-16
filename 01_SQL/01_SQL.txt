@@ -1,0 +1,36 @@
+
+DDL - Data Definition Language
+DML - Data Manipulation Language
+DCL - Data Control Language
+DQL - Data Query Language 
+TCL - Transaction Control Language 
+
+
+dấu gạch đứng đầu tiên 
+==> bắt buộc có 1 quan hệ
+==> Min = 1
+
+dấu o đầu tiên 
+==> không bắt buộc có quan hệ
+==> Min = 0
+
+dấu gạch thứ 2 
+==> có nhiều nhất là 1 quan hệ
+==> Max = 1
+
+dấu 3 chân 
+==> có nhiều nhất là n quan hệ
+==> Max = n (n >= 1)
+
+
+thêm region(id, )
+quan hệ 1-n 
+
+Employee thêm first name, last name
+
+chuyển er model thành relational schema
+
+
+==> Tóm lại
+- SQL là gì
+- Các quan hệ: one-one, one-many, many-many
