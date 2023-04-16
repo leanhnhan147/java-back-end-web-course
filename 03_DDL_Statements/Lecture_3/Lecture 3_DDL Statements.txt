@@ -1,0 +1,7 @@
+Delete: Nói quên nhau nhưng thực chất vẫn còn nhung nhớ, có thể quay trở lại với nhau. Đây là cách oan toàn, và nếu dữ liệu lớn thì sẽ không nhanh lắm khi xóa dữ liệu trong bảng và hầu hết các beginner đều xài không chỉ vì ưu điểm đó của nó mà còn cả vì chỉ biết mỗi cách đó.
+
+Truncate: Xóa hoàn toàn ký ức về nhau nhưng vẫn có thể làm bạn (xóa record cũ, vẫn thêm record mới vào table được). Và chạy khá nhanh vì chả cần suy nghĩ phải giữ lại record nào, log thông tin như thế nào. Lệnh này dùng cho trường hợp bạn khá là chắc kèo không thèm quan tâm đến thông tin đã xóa, và tỏ ra ngầu khi nó chạy nhanh hơn delete.
+
+Drop: Xóa hết tất cả ký ức và quan hệ, không bao giờ gặp lại nhau. Table đó sẽ biến mất khỏi database. Sử dụng khi muốn xóa bảng
+
+-- Tham khảo: https://m.facebook.com/notes/ban-h%E1%BB%8Dc-t%E1%BA%ADp-c%C3%B4ng-ngh%E1%BB%87-ph%E1%BA%A7n-m%E1%BB%81m-ng%C3%B4i-nh%C3%A0-s%E1%BA%BB-chia/x%C3%B3a-b%E1%BB%8F-qu%C3%A1-kh%E1%BB%A9-delete-truncate-hay-drop/471598916771121/
