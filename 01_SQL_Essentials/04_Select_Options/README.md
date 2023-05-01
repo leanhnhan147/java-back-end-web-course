@@ -18,6 +18,7 @@
       - The select list of a SELECT statement
       - A HAVING clause.
   - Aggregate Functions
+
 | Function      | Description                 				            |
 | ------------- | ----------------------------------------------------- |
 | AVG()         | Return the average value in a column       		    |
@@ -26,13 +27,16 @@
 | MIN()    		| Returns the smallest value in a column      		    |
 | MAX()		    | Returns the largest value in a column 			    |
 | SUM()		    | Returns the sum values in a column 			        |
+
   - Scalar functions
+
 | Function      | Description                 				                    |
 | ------------- | ------------------------------------------------------------- |
 | LEN()         | Returns the length of a text field           		            |
 | ROUND()     	| Rounds a numeric field to the number of decimals specified    |
 | NOW(*)		| Returns the current system date and time      		        |
 | FORMAT()    	| Formats how a field is to be displayed      		            |
+
 - Other Options
   - UNION Operator
   - SELECT INTO Statement
