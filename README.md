@@ -3,8 +3,6 @@
 ## 1. SQL Essentials
 
 ### Session 01: Database Concepts and ER Model
-- Database Concepts
-- ER Model, Relational Model
 
 ### Session 02: Introduction SQL and SQL Server
 
