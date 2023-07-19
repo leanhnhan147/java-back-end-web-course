@@ -1,5 +1,5 @@
 ## Colection in Java
-- Cung cấp kiên trúc lưu trữ và thao tác với Objects như Searching, Sorting, Insertion, Deletion.
+- Cung cấp kiến trúc lưu trữ và thao tác với Objects như Searching, Sorting, Insertion, Deletion.
 - Cung cấp nhiều interface and classes
   - Interface: Set, List, Queue, Deque
   - Classes: ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet
@@ -55,14 +55,28 @@
 | Thread safe 	| Safe  		           | UnSafe               | Safe                 |
 | Performance   | Fast                 | Very Fast            | Slow                 |
 
-## Autoboxing
+## Autoboxing (Java Default)
 - Chuyển từ primitive data => wrapper class
 - Chuyển từ int => Integer
 - Chuyển từ char => Char
 - Chuyển từ long => Long
 
 ## Unboxing
-- Chuyển từ wrapper class => rimitive data
+- Chuyển từ wrapper class => primitive data
 - Chuyển từ Integer => int
 - Chuyển từ Char => char
 - Chuyển từ Long => long
+
+## Comparable and Comparator
+| Comparable                                     | Comparator                                                | 
+| ---------------------------------------------- | --------------------------------------------------------- |
+| Phải implement vào class muốn được so sánh     | Không bắt buộc phải implement vào class muốn được so sánh |
+| Sử dụng compareTo		                           | Sử dụng compare                                           |
+| Chỉ có thể tạo ra 1 method so sanh cho 1 class | Có thể tạo ra nhiều cách so sánh khác nhau cho 1 class    |
+
+## Array and ArrayList
+| Array                              | ArrayList                              |
+| ---------------------------------- | -------------------------------------- |
+| Fix length                         | Dynamic length, changeable length      |
+| Chứa cả Primitive datatype, Object | Chỉ chứa Object                        |
+| Vùng nhớ các phần tử nằm liền kề   | Vùng nhớ các phần tử nằm không liền kề |

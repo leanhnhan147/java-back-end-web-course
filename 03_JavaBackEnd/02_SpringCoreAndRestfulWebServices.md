@@ -2,11 +2,16 @@ SOLID (https://www.bmc.com/blogs/solid-design-principles/#:~:text=SOLID%20is%20a
 
 ## IoC - Inversion of Control
 - Là 1 nguyên lý thiết kế, phát triển phần mềm mà thao tác này sẽ đảo chiều sự phụ thuộc (Dependency) của các class, object với nhau.
-- Quản lý các phụ thuộc (Dependency) thông qua container.
+- Quản lý các Dependency thông qua container.
 - Giúp chúng ta không cần khởi tạo các Object bị phụ thuộc.
 
 ## DI - Dependency Injection
 - Là 1 intance của IoC mà sự phụ thuộc (Dependency) này được thực hiện Injec đối tượng từ bên ngoài.
+
+## There are three common ways of injecting dependencies
+- Property injection thông qua Autowired
+- Contructor injection
+- Method injection
 
 ## Bean factory
 - Là 1 container sử dụng cơ chế IoC
@@ -50,9 +55,9 @@ Source: https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch0
 - Tương tự @Conponent
 - Đánh dấu class này là 1 service để xử lý nghiêp vụ, logic
 
-## @Respository
+## @Repository
 - Tương tự @Component 
-- Đ́nh dấu Class này là Respository để xử lý, thao tác (Inser, Update, Delete,...) với Database  
+- Đánh dấu Class này là Repository để xử lý, thao tác (Inser, Update, Delete,...) với Database  
 
 ## @Controller
 - Đánh dấu Class này là Bean
@@ -72,13 +77,8 @@ Source: https://docs.spring.io/spring-framework/docs/3.0.0.M3/reference/html/ch0
 - Để gop nhóm các API trong path đó
 - Không dùng @Requestmapping vẫn được
 
-## There are three common ways of injecting dependencies
-- Property injection thông qua Autowired
-- Contructor injection
-- Method injection
-
 ## Microservices
-- Tách thành nhiều services nhỏ
+- Tách thành nhiều services nhỏ (tương ứng với 1 project nhỏ)
 
 ## Web Services 
 - Là 1 dạng API tương tác thông qua Network
@@ -99,4 +99,3 @@ JSON - https://json.org/example.html
 
 ## @RequestParam
 - Sử dụng để lấy param không yêu cầu thứ tự param
-

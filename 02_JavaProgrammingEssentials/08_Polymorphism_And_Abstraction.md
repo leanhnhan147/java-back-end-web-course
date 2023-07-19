@@ -12,9 +12,24 @@
 
 ## Interface
 - Không phải là 1 Class
-- Là **tập hợp các Abstract methods** (Abstract methods là  method không có body)
+- Là **tập hợp các Abstract methods** (Abstract methods là method không có body)
 - Một **Class** phải **Implements hết tất cả method trừu tượng**
 - **Default Access Modifier** là **Public**
+- Không thể tạo đối tượng từ Interface
+
+## Astract Class
+- Là 1 class
+- Có thể có hoặc không các **Abstract methods**
+- Không thể tạo đối tượng từ Astract Class
+
+## Astract Class and Interface
+| Astract Class                                         | Interface                                             |
+| ----------------------------------------------------- | ----------------------------------------------------- |
+| Có thể có hoặc không các **Abstract methods**         | Chỉ có thể có các **Abstract methods**                |
+| Không hỗ trợ đa hình                                  | Có hỗ trợ đa hình                                     |
+| Chứa các biến là final, non-final, static, non-static | Chỉ chứa static, final (Hằng số)                      |
+| Có thể dùng private, protected, public                | Mặc định là public                                    |
+| Có thể kế thừa và implement nhiều interface           | Chỉ có thể kế thừa interface                          |
 
 ## Interface và Abstract Class cái này chạy nhanh hơn?
 - Abstract Class chạy nhanh hơn 
@@ -29,13 +44,6 @@
 ## Khi nào dùng Interface?
 - Chỉ là khung xướng, tức là chỉ toàn là Method
 - Class nào cũng có thể Implements và nó Chỉ quan tâm với Method
+
 ## Khi nào dùng Astract Class?
 - Có 1 điểm chung để các Class tạo ra các mối quan hệ với nhau
-
-## This Keyword
-- This trỏ tới đối tượng (Oject) hiện tại.
-
-## Final Keyword
-
-## Static Keyword
-- Dùng  trong Class lồng nhau (Super Class truy xuất Properties của Sub Class, Sub Class không thể truy xuất Properties của Super Class)
