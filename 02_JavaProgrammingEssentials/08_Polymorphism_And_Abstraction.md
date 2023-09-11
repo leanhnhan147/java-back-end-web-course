@@ -127,3 +127,98 @@ public static void main(String[] args) {
 > Turning the vehicle alarm on.
 
 > Turning the vehicle alarm off.
+
+```java
+public class Car implements Vehicle {
+
+    private String brand;
+
+    public Car(String brand) {
+        this.brand = brand;
+    }
+
+    @Override
+    public String getBrand() {
+        return brand;
+    }
+
+    @Override
+    public String speedUp() {
+        return "The car is speeding up.";
+    }
+
+    @Override
+    public String slowDown() {
+        return "The car is slowing down.";
+    }
+}
+```
+
+```java
+public class Car implements Vehicle, Alarm {
+
+    private String brand;
+
+    public Car(String brand) {
+        this.brand = brand;
+    }
+
+    @Override
+    public String getBrand() {
+        return brand;
+    }
+
+    @Override
+    public String speedUp() {
+        return "The car is speeding up.";
+    }
+
+    @Override
+    public String slowDown() {
+        return "The car is slowing down.";
+    }
+
+//    Way 1
+    @Override
+    public String turnAlarmOn() {
+        return Vehicle.super.turnAlarmOn();
+    }
+
+    @Override
+    public String turnAlarmOff() {
+        return Vehicle.super.turnAlarmOff();
+    }
+
+//    Way 2
+    @Override
+    public String turnAlarmOn() {
+        return Alarm.super.turnAlarmOn();
+    }
+
+    @Override
+    public String turnAlarmOff() {
+        return Alarm.super.turnAlarmOff();
+    }
+
+//    way 3
+    @Override
+    public String turnAlarmOn() {
+        return Vehicle.super.turnAlarmOff() + " " + Alarm.super.turnAlarmOn() ;
+    }
+
+    @Override
+    public String turnAlarmOff() {
+        return Vehicle.super.turnAlarmOff() + " " + Alarm.super.turnAlarmOff();
+    }
+}
+```
+
+> BMW
+
+> The car is speeding up.
+
+> The car is slowing down.
+
+> Turning the vehicle alarm off. Turning the alarm on.
+
+> Turning the vehicle alarm off. Turning the alarm off.
