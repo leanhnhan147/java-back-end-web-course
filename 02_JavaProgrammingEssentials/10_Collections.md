@@ -80,3 +80,10 @@
 | Fix length                         | Dynamic length, changeable length      |
 | Chứa cả Primitive datatype, Object | Chỉ chứa Object                        |
 | Vùng nhớ các phần tử nằm liền kề   | Vùng nhớ các phần tử nằm không liền kề |
+
+## Map Interface
+- Là cấu trúc dữ liệu lưu trữ theo dạng key - value 
+- Ứng dụng ở Database Redis (caching)
+
+## Caching
+- 
