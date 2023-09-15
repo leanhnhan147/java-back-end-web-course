@@ -57,3 +57,75 @@
 - 25 Implementing Dynamic Filtering for RESTful Service
 - **27 Versioning RESTful Services Header and Content Negotiation Approach**
 - **28 Implementing Basic Authentication with Spring Security**
+
+## Lombok
+
+## DTO request & response
+
+## Pagination
+
+## mapstruct
+
+```
+<dependency>
+  <groupId>org.mapstruct</groupId>
+  <artifactId>mapstruct</artifactId>
+  <version>1.5.5.Final</version>
+</dependency>
+```
+
+```
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+  <version>3.11.0</version>
+  <configuration>
+    <annotationProcessorPaths>
+      <path>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct-processor</artifactId>
+        <version>1.5.5.Final</version>
+      </path>
+      <path>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.28</version>
+      </path>
+      <path>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok-mapstruct-binding</artifactId>
+        <version>0.2.0</version>
+      </path>
+    </annotationProcessorPaths>
+  </configuration>
+</plugin>
+```
+
+```java
+package com.rest.webservices.mapper;
+
+import com.rest.webservices.entity.User;
+import com.rest.webservices.payload.request.UserRequest;
+import com.rest.webservices.payload.response.UserResponse;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
+
+import java.util.List;
+
+@Mapper(componentModel = "spring")
+public interface UserMapper {
+    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
+
+    UserRequest userToUserRequest(User user);
+    UserResponse userToUserResponse(User user);
+    User userRequestToUser(UserRequest userRequest);
+
+    List<UserResponse> usersToUserRessponses(List<User> users);
+
+}
+```
+
+## Configuring the Default Format dd/MM/yyyy HH:mm:ss
+
+spring.jackson.date-format=dd/MM/yyyy HH:mm:ss
+spring.jackson.time-zone=Asia/Ho_Chi_Minh
