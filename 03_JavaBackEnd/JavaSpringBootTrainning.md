@@ -127,5 +127,5 @@ public interface UserMapper {
 
 ## Configuring the Default Format dd/MM/yyyy HH:mm:ss
 
-spring.jackson.date-format=dd/MM/yyyy HH:mm:ss
-spring.jackson.time-zone=Asia/Ho_Chi_Minh
+- spring.jackson.date-format=dd/MM/yyyy HH:mm:ss
+- spring.jackson.time-zone=Asia/Ho_Chi_Minh
