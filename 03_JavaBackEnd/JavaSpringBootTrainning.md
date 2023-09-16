@@ -129,3 +129,31 @@ public interface UserMapper {
 
 - spring.jackson.date-format=dd/MM/yyyy HH:mm:ss
 - spring.jackson.time-zone=Asia/Ho_Chi_Minh
+
+Chọn vị trí
+Quản lý dịch vụ
+Quản lý xe ôm
+Quản lý taxi
+
+Quản lý giá xe
+
+- 4 chỗ, 7 chỗ theo km
+- xe ôm theo km
+
+Người dùng gửi định vị trí
+Tài xế gửi định vị trí
+=> Real time
+
+Trả chuyển
+
+Định nghĩa rule
+Quản lý tài xế, rule của tài xế
+Xem doanh thu dự kiến
+Tài xế tham gia vào hệ thống phải đóng tiền ký quỹ
+
+Chat
+track tọa độ tài xế và driver và custom
+khởi tạo phiên chat
+
+Real time tracking
+khi tài xế di chuyển bắn tọa độ lên
