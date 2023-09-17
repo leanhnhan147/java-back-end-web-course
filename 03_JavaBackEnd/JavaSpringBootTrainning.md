@@ -130,9 +130,25 @@ public interface UserMapper {
 - spring.jackson.date-format=dd/MM/yyyy HH:mm:ss
 - spring.jackson.time-zone=Asia/Ho_Chi_Minh
 
+## mapstruct
+
+## Custom Responese (Java Generic)
+
+```java
+public class ApiMessageDto<T> {
+    private Boolean result = true;
+    private String code = null;
+    private T data = null;
+    private String message = null;
+}
+```
+
 Chọn vị trí
+
 Quản lý dịch vụ
+
 Quản lý xe ôm
+
 Quản lý taxi
 
 Quản lý giá xe
@@ -157,3 +173,5 @@ khởi tạo phiên chat
 
 Real time tracking
 khi tài xế di chuyển bắn tọa độ lên
+
+real time communication
