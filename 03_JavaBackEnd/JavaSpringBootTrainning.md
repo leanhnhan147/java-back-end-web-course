@@ -3,8 +3,6 @@
 - REST stands for REpresentational State Transfer.
 - REST is an architectural style not a protocol.
 
-##
-
 ## Questions to Answer
 
 - What is dispatcher servlet?
@@ -114,9 +112,7 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
-    UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-    UserRequest userToUserRequest(User user);
     UserResponse userToUserResponse(User user);
     User userRequestToUser(UserRequest userRequest);
 
@@ -130,8 +126,6 @@ public interface UserMapper {
 - spring.jackson.date-format=dd/MM/yyyy HH:mm:ss
 - spring.jackson.time-zone=Asia/Ho_Chi_Minh
 
-## mapstruct
-
 ## Custom Responese (Java Generic)
 
 ```java
@@ -143,35 +137,24 @@ public class ApiMessageDto<T> {
 }
 ```
 
-Chọn vị trí
+## Annotation
 
-Quản lý dịch vụ
+- **@Target**: Dùng để chú thích phạm vi sử dụng của một Annotation. Các chú thích này đã được định nghĩa trong enum java.lang.annotation.ElementType:
+  - ElementType.TYPE: Chú thích trên Class, interface, enum, annotation
+  - ElementType.FIELD: Chú thích trường (field), bao gồm cả các hằng số enum.
+  - ElementType.METHOD: Chú thích trên method.
+  - ElementType.PARAMETER: Chú thích trên parameter.
+  - ElementType.CONSTRUCTOR: Chú thích trên constructor.
+  - ElementType.LOCAL_VARIABLE: Chú thích trên biến địa phương.
+  - ElementType.ANNOTATION_TYPE: Chú thích trên Annotation khác.
+  - ElementType.PACKAGE: Chú thích trên package.
+- **@Retention**: Dùng để chú thích mức độ tồn tại của một Annotation nào đó. Cụ thể có 3 mức nhận thức tồn tại của vật được chú thích, và được định nghĩa trong enum java.lang.annotation.RetentionPolicy:
+  - RetentionPolicy.SOURCE: Tồn tại trên mã nguồn, và không được trình biên dịch nhận ra.
+  - RetentionPolicy.CLASS: Mức tồn tại được trình biên dịch nhận ra, nhưng không được nhận biết bởi máy ảo tại thời điểm chạy (Runtime).
+  - RetentionPolicy.RUNTIME: Mức tồn tại lớn nhất, được trình biên dịch nhận biết, và máy ảo (JVM) cũng nhận ra khi chạy chương trình.
+- **@Inherited**: Chú thích này chỉ ra rằng chú thích mới nên được bao gồm trong tài liệu Java được tạo ra bởi các công cụ tạo tài liệu Java.
+- **@Documented**: Chú thích chỉ ra rằng loại chú thích có thể được kế thừa từ lớp cha và có giá trị mặc định là false. Khi người dùng truy vấn kiểu Annotation của lớp con và lớp con không có chú thích cho kiểu này thì lớp cha của lớp được truy vấn cho loại chú thích sẽ được gọi. Chú thích này chỉ áp dụng cho các khai báo class.
 
-Quản lý xe ôm
+## Custom vadation @Sex
 
-Quản lý taxi
-
-Quản lý giá xe
-
-- 4 chỗ, 7 chỗ theo km
-- xe ôm theo km
-
-Người dùng gửi định vị trí
-Tài xế gửi định vị trí
-=> Real time
-
-Trả chuyển
-
-Định nghĩa rule
-Quản lý tài xế, rule của tài xế
-Xem doanh thu dự kiến
-Tài xế tham gia vào hệ thống phải đóng tiền ký quỹ
-
-Chat
-track tọa độ tài xế và driver và custom
-khởi tạo phiên chat
-
-Real time tracking
-khi tài xế di chuyển bắn tọa độ lên
-
-real time communication
+- Kiểm tra value có phải là Nam, Nữ, Khác không
