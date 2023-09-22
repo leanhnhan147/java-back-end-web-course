@@ -175,5 +175,5 @@ public class ApiMessageDto<T> {
   - controller
 - Check project
 - What is Criteria?
-- Postman: Create and test all controller exception forger password
+- Postman: Create and test all controller except forger password
 - How many types of response?
