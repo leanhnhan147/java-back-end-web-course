@@ -158,3 +158,22 @@ public class ApiMessageDto<T> {
 ## Custom vadation @Sex
 
 - Kiểm tra value có phải là Nam, Nữ, Khác không
+
+## HMAC - keyed-hash message authentication code
+
+- HMAC được tính toán bằng cách sử dụng một hàm hash cùng với secret key (là key chỉ có sender và receiver biết)
+
+## 22/09/2023
+
+- Cách tạo 1 CRUD
+  - model
+  - repository
+  - request (form)
+  - response (dto)
+  - mapstruct
+  - exception (error code)
+  - controller
+- Check project
+- What is Criteria?
+- Postman: Create and test all controller exception forger password
+- How many types of response?
