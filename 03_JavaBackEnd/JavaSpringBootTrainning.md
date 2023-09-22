@@ -165,7 +165,7 @@ public class ApiMessageDto<T> {
 
 ## 22/09/2023
 
-- Cách tạo 1 CRUD
+- How to create a CRUD
   - model
   - repository
   - request (form)
