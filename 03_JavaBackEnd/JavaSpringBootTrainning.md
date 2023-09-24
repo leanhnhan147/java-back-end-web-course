@@ -177,3 +177,20 @@ public class ApiMessageDto<T> {
 - What is Criteria?
 - Postman: Create and test all controller except forger password
 - How many types of response?
+
+## 24/09/2023
+
+- Trước khi check parentId phải join
+
+- @PreAuthorize
+
+  - L - List
+  - V - Get
+  - C - Create
+  - U - Update
+  - D - Delete
+
+- Dùng liquibase để handle việc tạo và migrate data
+  - 1. Cấu hình liquibase
+  - 2. Khởi tạo db(changelog) đầu tiên
+  - 3. Tạo diff changelog mỗi khi thêm 1 entity mới
