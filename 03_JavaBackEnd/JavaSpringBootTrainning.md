@@ -194,3 +194,9 @@ public class ApiMessageDto<T> {
   - 1. Cấu hình liquibase
   - 2. Khởi tạo db(changelog) đầu tiên
   - 3. Tạo diff changelog mỗi khi thêm 1 entity mới
+
+## Liquibase
+
+- changelog
+- changeset
+- changetype
