@@ -200,3 +200,11 @@ public class ApiMessageDto<T> {
 - changelog
 - changeset
 - changetype
+
+## 26/09/2023
+
+- Custom Id: Use Custom Generator (Use @GenericGenerator)
+- Saving CreatedBy, CreatedDate, LastModifiedBy, LastModifiedDate automatically: https://www.baeldung.com/database-auditing-jpa (Reading part 4. Spring Data JPA)
+- Exclude autocomplete không cần đăng nhập vẫn vào được
+
+## Main flow security
