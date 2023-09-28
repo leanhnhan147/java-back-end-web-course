@@ -208,3 +208,15 @@ public class ApiMessageDto<T> {
 - Exclude autocomplete không cần đăng nhập vẫn vào được
 
 ## Main flow security
+
+- Khi 1 API được gọi => Vào AuthorizationServer
+
+## 28/09/2023
+
+- How to us SourceTree
+  - Commit
+  - Push
+  - Pull
+  - Merge
+  - Fix conflict
+  - Stash
