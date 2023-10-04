@@ -220,3 +220,127 @@ public class ApiMessageDto<T> {
   - Merge
   - Fix conflict
   - Stash
+
+## 01/10/2023
+
+- One tenant connect to one database
+
+- Create database: db_elms_tenant
+- Create user
+  - elms_user@% - Fullpermissions
+  - elms_user@localhost - Fullpermissions
+- Run project
+- Test postman: account: itdemodev/123456
+  => success -> has token
+- Change url in service > feign > FeignDbConfigAuthService.java -> ${auth.internal.base.url}
+- Run project
+- Test postman: url http://localhost:7878/v1/category/get/1
+  - Headers
+    - Key: X-tenant
+    - Values:
+
+db: db_elms_tenant
+user: elms_user
+pass: elms_user@123
+
+account: itdemodev/123456
+
+https://elms-auth.developteam.net/v1/permission/create
+
+1. Quản lý category + id + name + kind(có kind: 1 Danh mục trường, 2: danh mục hệ) + parent
+   -> Nhân
+
+2. Quản lý student + id + fullname + birthday + mssv + phone(unique) + email(unique) + password(min 6)
+   -> Thời
+
+3. Quản lý Subject + id + name + code(unique) + description
+   -> Phúc
+
+4. Course + id + subject + name + description + subject
+   -> Đa
+
+5. Registration: + id + student + course + dateRegister + date End + isIntern(int 0, 1) -> có đăng ký thực tập hay ko
+   -> Long
+
+## 02/10/2023
+
+1.  Registration + schedule (Json): + {
+    "t2": "11H00-13H00|17H00-19H00",
+    "t3": "",
+    "t4": "",
+    "t5": "",
+    "t6": "",
+    "t7": "",
+    "cn": "",
+    }
+
+        + state: (int: 1 -> register, 2 -> learning, 3 -> finished, 4 -> cancle)
+
+        -> curd + api lấy toàn bộ ds sv có dk khóa học và đang là state là learning
+
+    -> Long
+
+2.  Quản lý giáo án của 1 môn
+    Lecture + id + subject + kind: (int: 1 section, 2: lession) + name + shortDescriptiption + description + urlDocument + order(int) -> dùng để sắp xếp
+    -> curd, get-all-lecture-by-subject(lấy tất cả các bài học trạng thái active, có order)
+    -> Phúc
+
+3.  Quản lý leader + id + name + phone(unique) + avatar + email + password
+    -> curd, autocomple, profile, login(phone, password)
+    -> Nhân
+
+- autocomple:
+  - id
+  - name
+- profile: There is no Auditor
+- update profile: change password
+
+4.  Task: + id + student + course + lession + state: (int 1 -> asign, 2 done)
+
+        -> curd + api asign-all(chọn vào 1 lession và gán cho toàn bộ student)
+
+    -> Đa
+
+5.  Student + univerity: Category(Trường nào) + class: Category(Cao đẳng, đại học)
+    -> api get-myprofile, login(phone, password), my-course(lấy course của mình)
+    -> Thời
+
+## 03/10/2023
+
+1. Project + id + name + avatar + description + state(int 1 -> created, 2 -> running, 3 done, 4 cancel) + startDate + endDate + leader: Leader
+   -> Long
+
+2. ProjectRole(backend, frontnend, designer....) + id + name + description
+   -> Phuc
+
+3. Developer + id + student + role: ProjectRole + totalProject + totalCancelProject
+   -> Nhan
+
+4. MemberProject + id + developer + role: ProjectRole + schedule: String
+   -> Da
+
+5. ProjectTask + id + project + developer + taskName + description + startDate + dueDate + state(int 1->created, 2 -> processing, 3 -> Done, 4 -> Cancel)
+   -> Thoi
+
+## 04/10/2023
+
+1. Lecture - thêm api update-sort: nhận vào ds các lecture cần update -> chỉ cần update lại toàn bộ lecture đưa lên với cái ordering mới
+   -> Phúc
+
+2. Course - Thêm field: + state(int 1 -> chưa bắt đầu, 2 đã bắt đầu, 3 đã kết thúc, 4 hủy) + leader:
+   -> Đa
+
+3. Login leader - Dùng feign
+   -> Nhân
+
+4. Login student - Dùng feign
+   -> Thời
+
+5. Task: - Thêm field + note + startDate + dueDate
+   -> Phúc
+
+6. Developer - Thêm field: + Level (int 1 -> 5)
+   -> Nhân
+
+7. Registration - Thêm field: + isIssuedCertify(int 0 chưa, 1 là đã ký, đã ký giấy thực tập hay chưa) + dateIssuedCertify(auto matic update khi chuyển isIssuedCertify về 1)
+   -> Long
