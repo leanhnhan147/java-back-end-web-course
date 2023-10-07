@@ -246,3 +246,8 @@ pass: elms_user@123
 account: itdemodev/123456
 
 https://elms-auth.developteam.net/v1/permission/create
+
+## 05/10/2023
+
+spring.mail.username=anhnhan9a3@gmail.com
+spring.mail.password=hgrqnxidkfiiyogm
