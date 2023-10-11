@@ -253,3 +253,16 @@ spring.mail.username=anhnhan9a3@gmail.com
 spring.mail.password=hgrqnxidkfiiyogm
 
 ## 09/10/2023
+
+## 11/10/2023
+
+- Developer: Add API developer/project/{id}
+  - response: list developer
+- Setting: Remove authorize API find by key, find by group and Get only isSystem = false
+- Leader: Fix CreateLeaderForm insert status field
+- Company: Add API company/list-company (public) with pageable
+  - reponse: {
+    "id":
+    "name":
+    "logo":
+    }
