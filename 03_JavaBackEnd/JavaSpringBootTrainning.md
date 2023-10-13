@@ -286,3 +286,18 @@ spring.mail.password=hgrqnxidkfiiyogm
 
 - Delete RegistrationMoneyHistory
   - Không có
+
+## 13/10/2023
+
+Project thêm 1 field -> isScrored -> Int(0: chưa, 1: rồi)
+--> Schedule cứ 0h:
+a. check project nào đã done + isScore == 0 --> tính điểm cho dev và leader
+rule CỘNG điểm:
+leader (root) --> toàn bộ member project _ FINISH_PROJECT_SCORE(10)
+leader (team) --> memeber team _ FINISH*PROJECT_SCORE(10)
+member. --> FINISH_PROJECT_SCORE
+b. check project nào đã fail + isScore == 0 -> rule truừ điểm:
+rule TRỪ:
+leader (root) --> toàn bộ member project * FINISH*PROJECT_SCORE(10)
+leader (team) --> memeber team * FINISH_PROJECT_SCORE(10)
+member. --> FINISH_PROJECT_SCORE
