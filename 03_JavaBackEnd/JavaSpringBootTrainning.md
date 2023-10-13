@@ -266,3 +266,23 @@ spring.mail.password=hgrqnxidkfiiyogm
     "name":
     "logo":
     }
+
+## 12/10/2023
+
+- Delete Company
+  - CompanyRequest
+  - CompanySeek
+  - CompanySubscription
+- Delete Developer
+
+  - CompanySeek
+  - MemberProject
+  - ProjectTask
+
+- Delete Leader
+
+  - Course (nếu có => error)
+  - Project (nếu có => error)
+
+- Delete RegistrationMoneyHistory
+  - Không có
