@@ -301,3 +301,8 @@ rule TRỪ:
 leader (root) --> toàn bộ member project * FINISH*PROJECT_SCORE(10)
 leader (team) --> memeber team * FINISH_PROJECT_SCORE(10)
 member. --> FINISH_PROJECT_SCORE
+
+## 14/10/2023
+
+- Leader
+  - Profile: add permission into response
