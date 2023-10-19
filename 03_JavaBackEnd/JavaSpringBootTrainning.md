@@ -304,9 +304,18 @@ member. --> FINISH_PROJECT_SCORE
 
 ## 14/10/2023
 
-- Leader
-  - Profile: add permission into response
+1. Leader
+
+- Profile: add permission into response
 
 ## 17/10/2023
 
-- Company: add field id into response profile
+1 Company:
+
+- Profile: add field id into response
+
+## 19/10/2023
+
+1. Leader
+
+- Profile: add field id into response
