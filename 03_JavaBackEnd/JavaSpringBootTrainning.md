@@ -319,3 +319,9 @@ member. --> FINISH_PROJECT_SCORE
 1. Leader
 
 - Profile: add field id into response
+
+## 20/10/2023
+
+1. Company
+
+- Api lấy list tất cả service mà company đã mua (theo session)
