@@ -325,3 +325,5 @@ member. --> FINISH_PROJECT_SCORE
 1. Company
 
 - Api lấy list tất cả service mà company đã mua (theo session)
+
+## 24/10/2023
