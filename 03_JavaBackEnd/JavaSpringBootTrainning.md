@@ -325,3 +325,11 @@ member. --> FINISH_PROJECT_SCORE
 1. Company
 
 - Api lấy list tất cả service mà company đã mua (theo session)
+
+## 09/11/2023
+
+usrname: bikedev_user
+passowrd: bikedev-user@123
+
+db_ww_tenant
+db_ww_auth
