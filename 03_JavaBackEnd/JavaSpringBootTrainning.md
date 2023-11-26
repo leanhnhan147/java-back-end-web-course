@@ -337,3 +337,8 @@ db_ww_auth
 ## 25/11/2023
 
 ww-socket
+
+## Booking
+
+Booking -> Cancel by customer -> state booking = -100
+Booking -> Accept -> Cancel by customer -> state booking = -100
