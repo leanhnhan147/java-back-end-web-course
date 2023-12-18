@@ -67,3 +67,8 @@ client sidering
 request -> không tuân thu acy -> design pattern
 
 pf
+
+kafka
+Tại sao lại chọn kafka
+Có ưu điểm gì
+Solution cho vấn đề bất đồng bộ xử lý thế nào
