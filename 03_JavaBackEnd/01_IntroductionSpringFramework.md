@@ -66,8 +66,6 @@ client sidering
 
 request -> không tuân thu acy -> design pattern
 
-pf
-
 kafka
 Tại sao lại chọn kafka
 Có ưu điểm gì
