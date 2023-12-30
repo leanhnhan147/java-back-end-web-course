@@ -344,5 +344,3 @@ Booking -> Cancel by customer -> state booking = -100
 Booking -> Accept -> Cancel by customer -> state booking = -100
 Booking -> Cancel by driver -> state booking = 0
 Booking -> Accept -> Cancel by driver -> state booking = 0
-
-## 29/12/2023
